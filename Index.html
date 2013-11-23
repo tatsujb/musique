@@ -1,0 +1,448 @@
+﻿<!DOCTYPE "html">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css.css">
+		<link rel="shortcut icon" href=".\favicon.ico">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script> 
+		function activateTab(genre,n,btn) {
+		if (btn != null) {
+			list=btn.parentNode;
+			for (var i = 0; i < list.childNodes.length; i=i+1) {
+			  if (list.childNodes[i].style != null) 
+			    list.childNodes[i].style.textTransform = "capitalize";
+			  }			
+			btn.style.textTransform = "uppercase";
+			document.title = btn.value;
+		}
+		else document.title = genre;
+		
+        // activate one out of all titles 
+		var titles = document.getElementById('titles');
+		titles.childNodes[0].nodeValue=document.title;
+	    // activate one out of all tabs 
+		if (n == 1) 
+			{
+			$("div[sel]").hide();
+			filter="div[sel='"+genre+"']";
+			$(filter).show();
+		} 
+			var tabCtrl = document.getElementById(genre);
+			for (var i = 1; i < tabCtrl.childNodes.length; i=i+2) {
+			  tabCtrl.childNodes[i].style.display = 'none';
+			  }
+			node = tabCtrl.childNodes[2*n-1];
+			node.style.display = 'block'; 
+		
+      }
+			</script>
+		<title>♪ La Musique</title>
+	</head>
+	<body background="musique.png" style=" background-attachment:fixed; background-position:center;">
+		<br/>
+		<div id="header">
+			<div >
+				<h1><div id="titles">♪ La Musique</div><div id="music">
+						<img align="right" src="new.png" alt="music" style="background-attachment:fixed; width:135px"/>
+					</div>
+			
+			<iframe id="player" seamless height="67" src="The Glitch Mob - Drive it Like You Stole it (Cryptex Reglitch).mp3" scrolling="no"></iframe>
+				</h1>
+			</div>
+						
+			</div>
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Glitch Mob - Drive it Like You Stole it<br/><br/><br/>
+			<div >
+				<img onclick="javascript:activateTab('♪ La Musique',1,null)" class=".home" id="home" src="home.png"/>
+			</div>
+			<div class="horizbar" sel="Glitch">
+				<form class="tabs">
+					<input onclick="javascript:activateTab('Glitch',2,this)" class="btn" type="button" value="edIT"/>
+					<input onclick="javascript:activateTab('Glitch',3,this)" class="btn" type="button" value="Gramatik"/>
+					<input onclick="javascript:activateTab('Glitch',4,this)" class="btn" type="button" value="The Glitch Mob"/>
+					<input onclick="javascript:activateTab('Glitch',5,this)" class="btn" type="button" value="Pretty Lights"/>
+				</form>
+			</div> 
+
+			<div class="horizbar" sel="New Wave">
+				<form class="tabs">
+					<input onclick="javascript:activateTab('New Wave',2,this)" class="btn" type="button" value="Lazerhawk"/>
+					<input onclick="javascript:activateTab('New Wave',3,this)" class="btn" type="button" value="Power Glove"/>
+					<input onclick="javascript:activateTab('New Wave',4,this)" class="btn" type="button" value="Com Truise"/>
+					<input onclick="javascript:activateTab('New Wave',5,this)" class="btn" type="button" value="Teeel"/>
+				</form>
+			</div>
+			
+			<div class="horizbar" sel="Trip Hop">
+				<form class="tabs">
+					<input onclick="javascript:activateTab('Trip Hop',2,this)" class="btn" type="button" value="Björk"/>
+					<input onclick="javascript:activateTab('Trip Hop',3,this)" class="btn" type="button" value="Archive"/>
+					<input onclick="javascript:activateTab('Trip Hop',4,this)" class="btn" type="button" value="Chinese Man"/>
+					<input onclick="javascript:activateTab('Trip Hop',5,this)" class="btn" type="button" value="Massive Attack"/>
+				</form>
+			</div>
+			
+			<div class="horizbar" sel="Big Beat">
+				<form class="tabs">
+					<input onclick="javascript:activateTab('Big Beat',2,this)" class="btn" type="button" value="Prodigy"/>
+					<input onclick="javascript:activateTab('Big Beat',3,this)" class="btn" type="button" value="Chemichal Brothers"/>
+					<input onclick="javascript:activateTab('Big Beat',4,this)" class="btn" type="button" value="Moby"/>
+					<input onclick="javascript:activateTab('Big Beat',5,this)" class="btn" type="button" value="Lunatic Calm"/>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<div id="menu"> 
+			<form class="tabs">
+				<input onclick="javascript:activateTab('Glitch',1,null)" class="c" type="button" value="Glitch"/>
+				<input onclick="javascript:activateTab('New Wave',1,null)" class="c" type="button" value="New Wave"/>
+				<input onclick="javascript:activateTab('Trip Hop',1,null)" class="c" type="button" value="Trip Hop"/>
+				<input onclick="javascript:activateTab('Big Beat',1,null)" class="c" type="button" value="Big Beat"/>
+			</form>  
+		</div>
+	<div id="♪ La Musique" sel="♪ La Musique">
+		<div id="00" style="display: block;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+					La musique est un art passionnant : Il permet d'exprimer emotions, sentiments et même énergies de façon claires, contrairement à l'Art avec un grand A, qui lui ne touche pas le grand public avec la même éfficacité. La musique transmet avec un taux de réusite sans comparaison avec tout autre moyen de comuniquation son message au très, très large publique.
+				<br/>
+				<br/>
+				<br/>
+					Bienvenu sur notre site web, moi Jacques Bardout et moi Rémi Saulneron, avons mis à votre disposition des informations et des titres à l'écoute sur nos artistes et genres préférés du moment.<br><br>On vous souhaite une bonne visite!<br><br>←Pour commencer votre navigation, cliquez sur l'une des catégories
+				</div>
+			</div>
+		</div>
+	</div>
+	<script> activateTab('♪ La Musique',1,null) </script>
+	<div id="Glitch" sel="Glitch">
+		<div id="01" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+					Le Glitch c'est un style de musique inspiré du terme du même nom en informatique qui désigne une erreur, un défaut temporaire qui dans l'éxecution du code qui déclenche des artéfacts graphiques. Dans la scène musiquales les techniciens du son utilise ce terme pour définir un phénomène d'electricité statique ou  une pertubance dont une mauvaise série de branchements aurront été la cause, ce son inattendu momentané, qui serra alléatoirement produit par la machine donnera le titre de ce genre ou des sons s'y relatant, ou y resemblant de façon plus ou moins distante. Ceux-ci constitueront l'élement principal du rythme et l'air caractéristique du Glitch.	
+				<br/>
+				<br/>
+					edIT a adoubé ce style musical avec des morceaux tels Ants. Morceau repris par Les Twins (des jumeaux danseurs de Hip-Hop d'origine française à renomée mondiale) dans leur clip de danse le plus célèble qui vaudra le succès à ce genre. Bien des artistes ce jettent alors sur le coup dont The Glitch Mob group crée avec edIT et d'autre de la scène électro, Pretty Lights élargit son panoplie de genres (déja trés variés) au Glitch et Gramatik sort et déclenche le bang. Un succès phénoménal. Cet artiste sait tout faire dans ce genre et prends rapidment la place de meneur dans ce genre en montrant morceaux après morceux leur talent à travers une audace supérieure qui réussi coup sur coup.
+				</div>
+			</div>
+		</div>
+				
+		<div id="02" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				edIT comme dit dans le paragraphe sur le glitch à été l'amorce et le silex de ce genre richissime, frais et qui n'a pas fini de grandir et de nous surprendre.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong162184528" name="gsSong162184528"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=16218452&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=16218452&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=edIT%20Ants" title="Ants by edIT on Grooveshark">Ants by edIT on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong1621845381" name="gsSong1621845381"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=16218453&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=16218453&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=edIT%20Situps%20Pullups" title="Situps Pullups by edIT on Grooveshark">Situps Pullups by edIT on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+		
+		<div id="03" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				d'Origine slovène, Gramatik c'est installé a blooklin, il commence en 2011 grâce Pretty Lights, duquel il a su saisir l'attention. Devenu pour moi une référence pour tout et n'importe quoi, ces artistes excellent tellement dans leur domaine (qu'on peine a cantonner au glitch) qu'il sont devenus une pierre agulaire, de véritables leaders pour ce genre et toute une génération de musique.
+
+				</div>
+				</div>
+				<div id="cntr">
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3756170173" name="gsSong3756170173"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37561701&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37561701&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Gramatik%20The%20Illusion%20of%20Choice" title="The Illusion of Choice by Gramatik on Grooveshark">The Illusion of Choice by Gramatik on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3057353390" name="gsSong3057353390"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30573533&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30573533&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Gramatik%20Dungeon%20Sound" title="Dungeon Sound by Gramatik on Grooveshark">Dungeon Sound by Gramatik on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3718500624" name="gsSong3718500624"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37185006&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37185006&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Gramatik%20Day%20of%20the%20So%20Called%20Glory" title="Day of the So Called Glory by Gramatik on Grooveshark">Day of the So Called Glory by Gramatik on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong305736213" name="gsSong305736213"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30573621&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30573621&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Gramatik%20Flip%20The%20Script" title="Flip The Script by Gramatik on Grooveshark">Flip The Script by Gramatik on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3057750892" name="gsSong3057750892"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30577508&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=30577508&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Gramatik%20The%20Uprising" title="The Uprising by Gramatik on Grooveshark">The Uprising by Gramatik on Grooveshark</a></span></object></object>
+				</div>
+				</div>
+				
+				<div id="04" style="display: none;">
+				<div id="outer">
+					<div id="content">
+					<br/>
+					The Glitch Mob formée à partir des artistes établis (dont edIT) de ce genre en 2006, il ne cesse de créer et produisent occasionellement de rares diamants.
+				</div>
+			</div>
+			
+			<div id="cntr">	
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3159115760" name="gsSong3159115760">
+				<param name="movie" value="http://grooveshark.com/songWidget.swf" />
+				<param name="wmode" value="window" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="flashvars" value="hostname=grooveshark.com&songID=31591157&style=metal&p=0" />
+				<object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" />
+					<param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31591157&style=metal&p=0" />
+					<span><a href="http://grooveshark.com/search/song?q=The%20Glitch%20Mob%20We%20Can%20Make%20the%20World%20Stop" title="We Can Make the World Stop by The Glitch Mob on Grooveshark">We Can Make the World Stop by The Glitch Mob on Grooveshark</a></span>
+				</object>
+			</object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3196827957" name="gsSong3196827957">
+				<param name="movie" value="http://grooveshark.com/songWidget.swf" />
+				<param name="wmode" value="window" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="flashvars" value="hostname=grooveshark.com&songID=31968279&style=metal&p=0" />
+				<object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" />
+					<param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31968279&style=metal&p=0" />
+					<span><a href="http://grooveshark.com/search/song?q=Cryptex%20The%20Glitch%20Mob%20-%20Drive%20It%20Like%20You%20Stole%20It%20(Cryptex%20Reglitch)" title="The Glitch Mob - Drive It Like You Stole It (Cryptex Reglitch) by Cryptex on Grooveshark">The Glitch Mob - Drive It Like You Stole It (Cryptex Reglitch) by Cryptex on Grooveshark</a></span>
+				</object>
+			</object>
+			</div>
+			<br/>
+			<!--<div id="cnt">
+			<div style="margin-left:-35px">The Glitch Mob - We Can Make The World Stop &nbsp;&nbsp;&nbsp;&nbsp;The Glitch Mob - Drive it Like You Stole it</div><br/>
+			<iframe seamless height="67" src="The Glitch Mob - We Can Make The World Stop.mp3"  scrolling="no" style="float: left;"></iframe>
+			<iframe seamless height="67" src="The Glitch Mob - Drive it Like You Stole it (Cryptex Reglitch).mp3" scrolling="no" style="float: left;"></iframe>
+			</div>-->
+		</div>
+		
+		<div id="05" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Pretty Lights, artiste solitaire, ce qui l'orsequ'on évalue ces performances face au autres groupes, fait de lui le Marici (dieu bouddhiste à huit bras et 4 visages) des musiciens. Il incarne sinon le Pink Floyd de l'electro avec ces morceau à phases très multiples, toutes plus colorés les unes que les autres et fondant sans heurt d'environ sept minutes trente.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2652096466" name="gsSong2652096466"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26520964&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26520964&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Pretty%20Lights%20High%20School%20Art%20Class" title="High School Art Class by Pretty Lights on Grooveshark">High School Art Class by Pretty Lights on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3694589789" name="gsSong3694589789"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=36945897&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=36945897&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Pretty%20Lights%20Hot%20Like%20Dimes" title="Hot Like Dimes by Pretty Lights on Grooveshark">Hot Like Dimes by Pretty Lights on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3414912974" name="gsSong3414912974"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=34149129&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=34149129&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Pretty%20Lights%20I%20Know%20the%20Truth" title="I Know the Truth by Pretty Lights on Grooveshark">I Know the Truth by Pretty Lights on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2659794758" name="gsSong2659794758"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26597947&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26597947&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Pretty%20Lights%20Forever%20Lost" title="Forever Lost by Pretty Lights on Grooveshark">Forever Lost by Pretty Lights on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+	</div>	
+	<div id="New Wave" sel="New Wave">
+		<div id="06" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Le New Wave représente les année fin 1970-1980, la ou le sythé et la boites à rythmes était maitre. Son nom est tiré du genre cinématique du même nom. Les artistes qui suivent sont de ma propre selection et je les catégorise ainsi car leur style d'electro particulier (bien que moderne) cherche à retourner au sources du New-wave, en aromatisant soit d'auto-derision soit en poussant la recherche du genre revu et revsité au gouts du jour au maximum. 
+				</div>
+			</div>
+		</div>
+				
+		<div id="07" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				LazerHawk, le dérivative du New Wave par exellence, son interpretation du new wave est juste, force la nostagie et qui plus est irresistiblement entrainant.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong315387428" name="gsSong315387428"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538742&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538742&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Lazerhawk%20Dream%20Machine" title="Dream Machine by Lazerhawk on Grooveshark">Dream Machine by Lazerhawk on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3153873834" name="gsSong3153873834"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538738&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538738&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Lazerhawk%20Electric%20Groove" title="Electric Groove by Lazerhawk on Grooveshark">Electric Groove by Lazerhawk on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3153874029" name="gsSong3153874029"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538740&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31538740&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Lazerhawk%20Distress%20Signal" title="Distress Signal by Lazerhawk on Grooveshark">Distress Signal by Lazerhawk on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="08" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				POWER GLOVE. De leur propre proclamation : "Armé de deux Powergloves (manète en forme de gant nitendo), nous sommes deux avocats tout droit venus des rues du futur post-apocalyptiques de Los Angeles, 2043. Avec un soupçon d'idyle, et une tonne d'ennuis, nous y arriverons ...quels que soit les moyens auquels nous devrions avoir recours."
+				<br/><br/>
+				Malgrès mon bon sens je ne peux m'enpecher de les croire.
+				<br/><br/>
+				Je recommande vivement puisque dans le New Wave ils sont mes préférés et somme toute ils sont mon groupe préféré du moment.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2771471540" name="gsSong2771471540"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714715&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714715&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=POWER%20GLOVE%20Maximum%20Potential" title="Maximum Potential by POWER GLOVE on Grooveshark">Maximum Potential by POWER GLOVE on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2771473185" name="gsSong2771473185"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714731&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714731&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=POWER%20GLOVE%20Streets%20of%202043" title="Streets of 2043 by POWER GLOVE on Grooveshark">Streets of 2043 by POWER GLOVE on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2771472151" name="gsSong2771472151"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714721&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=27714721&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=POWER%20GLOVE%20Night%20Force" title="Night Force by POWER GLOVE on Grooveshark">Night Force by POWER GLOVE on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="09" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				De son vrai nom Seth Haley, Com Truise est un artiste électro originaire d’Oneida, dans l'État de New York. Il est actuellement basé à Princeton, New Jersey. Son nom de scène est une contrepèterie de Tom Cruise le celèbre acteur Américain. Ancien directeur artistique, il a d'abord démissionné avant de commencer sa carrière musicale. À ses débuts , il était un DJ Drum and Bass avant de trouver le style qui le caractérise aujourd'hui. Sa musique est très fortement influencée par celle de Boards of Canada, avec une production basée sur des sons vintages tendance 80s. Il est le créateur d'un genre musical expérimental appelé le "mid-fi synth-wave, slow-motion funk".
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong4004013366" name="gsSong4004013366"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=40040133&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=40040133&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Com%20Truise%20Flightwave" title="Flightwave by Com Truise on Grooveshark">Flightwave by Com Truise on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3170172482" name="gsSong3170172482"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31701724&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=31701724&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Com%20Truise%20Cyanide%20Sisters" title="Cyanide Sisters by Com Truise on Grooveshark">Cyanide Sisters by Com Truise on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong4004014084" name="gsSong4004014084"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=40040140&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=40040140&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Com%20Truise%20Ether%20Drift" title="Ether Drift by Com Truise on Grooveshark">Ether Drift by Com Truise on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="10" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Teeel est maître dans bien des domaines musicaux, parmi les New Waveurs il inspire le respect, son experience dans les autres genres lui sert d'atout pour réhausser ce genre et pousser la recherche encore plus loin.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2933323157" name="gsSong2933323157"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29333231&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29333231&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Teeel%20Galilean%20Moons" title="Galilean Moons by Teeel on Grooveshark">Galilean Moons by Teeel on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2933305123" name="gsSong2933305123"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29333051&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29333051&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Teeel%20Dark%20Passenger" title="Dark Passenger by Teeel on Grooveshark">Dark Passenger by Teeel on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3552646385" name="gsSong3552646385"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35526463&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35526463&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Teeel%20Deadites%20(Original%20Mix)" title="Deadites (Original Mix) by Teeel on Grooveshark">Deadites (Original Mix) by Teeel on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3545102165" name="gsSong3545102165"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35451021&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35451021&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Teeel%20Crystal%20Lake" title="Crystal Lake by Teeel on Grooveshark">Crystal Lake by Teeel on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Trip Hop" sel="Trip Hop">
+		<div id="11" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Ce genre musical a pour base une rythmique hip-hop, sur laquelle viennent se greffer toutes sortes d'influences, jazz, blues, musique électronique, musique de film, soul, rock, dub, etc. Il s'est ainsi beaucoup enrichi et il se décompose maintenant en de nombreux sous-genres (acid-jazz, downtempo, electro-dub, electro-jazz, electro-libre, …).
+On le décrit généralement avec des artistes précurseurs tels que Massive Attack, Portishead, Archive, Björk.Le genre se fait connaître de plus en plus (grâce, par exemple, aux musiques de publicités qui contiennent beaucoup de trip hop, ou encore aux musiques de films ou de séries télévisées).
+				</div>
+			</div>
+		</div>
+				
+		<div id="12" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Björk Guðmundsdóttir  est une musicienne, chanteuse, compositrice et actrice islandaise, née le 21 novembre 1965 à Reykjavik.
+En 1983, Björk crée avec quelques amis le groupe punk KUKL (sorcellerie en irlandais).
+Elle commencera sa carrière solo avec l'album Debut en 1993 et elle fera au total 12 album solo.
+Elle compose en 1999 la bande original du film "Dans la peau de John Malkovich", et son titre Army of me est remixer pour le film "Succer Punch".
+Elle crée le projet "Army of Mixes" pour venir en aide au victime du tsunami de 2004, ce projet avait pour but de recruter par concours des musiciens pour remixer le titre Army of Me (1995), de commercialiser ensuite une sélection des 20 meilleurs remixes, afin de récolter des fonds pour aider l'UNICEF.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong733323996" name="gsSong733323996"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=7333239&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=7333239&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Bj%C3%B6rk%20Army%20of%20Me" title="Army of Me by Björk on Grooveshark">Army of Me by Björk on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong147520971" name="gsSong147520971"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=14752097&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=14752097&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Bj%C3%B6rk%20Pagan%20Poetry" title="Pagan Poetry by Björk on Grooveshark">Pagan Poetry by Björk on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="13" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Archive est un groupe britannique de musique, formé autour de Darius Keeler et Danny Griffiths, en effet le groupe aujourd'hui 6 membres principaux et compte 16 entre 1994 et 2011. Son style musical est assez difficile à définir, le groupe empruntant des éléments aussi bien au rock qu'à l'électro et au trip hop.Le style musical qu'emprunte Archive est né avec le trip hop sur les deux premiers albums. Désormais, le groupe propose une musique touchant au trip hop, mais en fusionnant l'électro au progressif, au rock et à l'ambient. Keeler et Griffiths viennent terminer la ligne musicale complexe d'Archive avec les synthétiseurs et les samples. Ils possèdent 9 albums dont 1 exclusivement réservé au film "Michel Vaillant".
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong963686684" name="gsSong963686684"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=9636866&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=9636866&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Archive%20You%20Make%20Me%20Feel" title="You Make Me Feel by Archive on Grooveshark">You Make Me Feel by Archive on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2581804089" name="gsSong2581804089"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=25818040&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=25818040&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Archive%20Bullets" title="Bullets by Archive on Grooveshark">Bullets by Archive on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="14" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Chisene Man est un collectif français de hip-hop créé en 2004 et originaire de Aix-en-Provence.Le groupe s'est fait connaître grâce au morceau I've Got That Tune qui a été choisi par Mercedes-Benz pour sa campagne promotionnelle. Ils sortent leur premier album en 2007 intitulé "The Groove Sessions" et sortent le volume 2 en 2009, en 20011 arrive l'album "Racing with the sun" qu'ils remix en 2012 pour sortir "Remis with the sun". En 2012 un album spécialement enregistré à la Cigale sort.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2644625312" name="gsSong2644625312"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26446253&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26446253&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Chinese%20Man%20I've%20Got%20That%20Tune" title="I&#39;ve Got That Tune by Chinese Man on Grooveshark">I&#39;ve Got That Tune by Chinese Man on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3972195552" name="gsSong3972195552"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=39721955&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=39721955&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Chinese%20Man%20Get%20Up" title="Get Up by Chinese Man on Grooveshark">Get Up by Chinese Man on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="15" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Massive Attack est un groupe britannique, originaire de Bristol, précurseur de la musique trip hop. Ils font de nombreuses B.O de film, notemant pour Matrix, Mission Impossible ou encore Danny the Dog, de séries avec Misfits True Blood, legénérique d'ouverture de la série Dr House. Ils font aussi la musique de la B.A du jeu vidéo Assasin's Creed et la Tracklist du jeu Fifa 11.
+Ils sortent 9 album entre 1991 et 2010.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong6299375" name="gsSong6299375"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=62993&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=62993&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Massive%20Attack%20Teardrop" title="Teardrop by Massive Attack on Grooveshark">Teardrop by Massive Attack on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3518977213" name="gsSong3518977213"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35189772&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=35189772&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Massive%20Attack%20Dissolved%20Girl" title="Dissolved Girl by Massive Attack on Grooveshark">Dissolved Girl by Massive Attack on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Big Beat" sel="Big Beat">
+		<div id="16" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Le big beat est un genre musical dérivé du breakbeat dont le nom a été inventé par des journalistes anglais au milieu des années 1990. 
+Il se caractérise par un mélange de techno, de rock et de hip-hop et d'acid house. The Crystal Method, The Chemical Brothers, The Prodigy, 
+ou encore Fatboy Slim, en sont les plus éminents représentants.
+Bien que le terme big beat soit peu connu du grand public, ce genre représente pourtant une facette commerciale de la 
+musique électronique, notamment pour son utilisation massive dans les spots publicitaires, les jeux vidéo ou dans les films d'actions à gros
+ budget (The Prodigy dans 'Kick Ass'ou Lunatic Calm dans 'Matrix')
+				</div>
+			</div>
+		</div>
+				
+		<div id="17" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				The Prodigy est un groupe britannique de musique électronique formé par Liam Howlett en 1990, à Braintree, Essex, 
+Angleterre. Aux côtés notamment de The Chemical Brothers, Fatboy Slim et The Crystal Method, ils font partie des pionniers de la dance 
+électronique que qualifiera la presse plus tard de "big beat". Ce style atteint sa popularité dans les années 1990 avec le développement 
+des raves parties et de leur médiatisation dès lors qu'elles ont été rendues illégales. The Prodigy a vendu plus de 25 millions de disques 
+dans le monde entier ce qui en fait le plus grand vendeur de disques de l'histoire de la dance music.Leur musique est transversale à 
+différents styles allant de la rave, le hardcore, l'industrial et le breakbeat, au début des années 1990, puis évoluant vers le rock 
+alternatif, le big beat et le nu skool breaks avec une part plus importante donnée aux voix. Le groupe comprend Liam Howlett 
+(compositeur/claviers), Keith Flint (danseur/chanteur) et Maxim Reality (MC/chanteur, Keith Palmer de son vrai nom). Leeroy Thornhill 
+(danseur/claviers) a été membre du groupe de 1990 à 2000. Rob Holliday de Marilyn Manson y joue également de la guitare en concert. The Prodigy 
+est apparu sur la scène rave underground au début des années 1990, et a depuis lors atteint une immense popularité et une renommée mondiale. 
+Certains de leurs morceaux les plus populaires "Invaders mus die", "Out of Space", "Omen", "Voodoo People", "Firestarter", 
+"Breathe" et  "Smack My Bitch Up" ont été des hymnes de club et de festivals avant d'être relayés par les médias et la publicité.
+Le nom du groupe est inspiré du synthétiseur monophonique Prodigy du constructeur américain Moog Music Inc. que Liam Howlett utilisait au début 
+des années 1990.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3626693498" name="gsSong3626693498"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=36266934&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=36266934&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=The%20Prodigy%20Thunder" title="Thunder by The Prodigy on Grooveshark">Thunder by The Prodigy on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong337435487" name="gsSong337435487"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=33743548&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=33743548&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=The%20Prodigy%20Omen" title="Omen by The Prodigy on Grooveshark">Omen by The Prodigy on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="18" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				The Chemical Brothers est un duo de musique électronique anglais composé de Tom Rowlands et d'Ed Simons. Ils sont l'un des groupes enblèmatique du Big Beat Ils commencent à mixer dans des clubs locaux réputés sous le nom de "The Dust Brothers" Le 15 avril 1995 sortent leur premier album intitulé Exit Planet Dust. Le groupe se rebaptise "The Chemical Brothers", avec selon eux un son plus agressif et puissant et avec l'apport de voix. Leur succès international débute avec la sortie du single Life Is Sweet. Le duo entame alors une tournée mondiale avec notamment en première partie Daft Punk. Ils composent en 2010 la musique du film Hanna, en 2011 celle de Black Swan et en 2012 l'hymne officiel des JO 2012 à Londre. On peut aussi noter que le tritre Swoon est utilisée dans la série Misfits et qu le titre Midnight Madness figure dans la bande son de Por Evolution Soccer 2010.
+				</div>
+			</div>
+			<div id="cntr">
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3778563285" name="gsSong3778563285"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37785632&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=37785632&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=DJ%20The%20Chemical%20Brothers%20Midnight%20Madness" title="Midnight Madness by DJ The Chemical Brothers on Grooveshark">Midnight Madness by DJ The Chemical Brothers on Grooveshark</a></span></object></object>
+			<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2653040459" name="gsSong2653040459"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26530404&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=26530404&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=The%20Chemichal%20Brothers%20Galvanize%20Radio%20Edit" title="Galvanize Radio Edit by The Chemichal Brothers on Grooveshark">Galvanize Radio Edit by The Chemichal Brothers on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="19" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Moby, Richard Melville Hall, est un artiste de musique électronique américain et photographe qui est né le 11 septembre 1965 é New York dans le quartier de Harlem. Il possède de nombreux 
+ pseudonymes qu'il utilisespour sortir des singles.
+ Multi-instrumentiste, il chante, joue de la guitare, des claviers, de la basse et des percussions. On ne peut pas dire que Moby appartienne seulement au mouvement Big Beat, notement par sa diversité musicale.
+ Son premier album sort Time's up sort en 1991, il en sortira 14 autres jusqu'à Innocents sorti en 2013.
+ Nombreux de ses titres sont utilisés pour des films, la trilogies Jason Bourne, Scream, 60 secondes chrono, ou encore pour des séries, Prison Break, Les Experts, X-Files.
+				</div>
+			</div>
+			<div id="cntr">
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2920414779" name="gsSong2920414779"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29204147&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=29204147&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Moby%20Why%20Does%20My%20Heart%20Feel%20So%20Bad" title="Why Does My Heart Feel So Bad by Moby on Grooveshark">Why Does My Heart Feel So Bad by Moby on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3345552169" name="gsSong3345552169"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=33455521&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=33455521&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Moby%20Flower" title="Flower by Moby on Grooveshark">Flower by Moby on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+				
+		<div id="20" style="display: none;">
+			<div id="outer">
+				<div id="content">
+				<br/>
+				Lunatic Calm est un groupe de musique d'origine anglaise créé en 1996. Durant leur années actives (de 1996 à 2001) ils ont réalisé deux albums Metropole en 1998, qui a été comparé à The prodigy et d'autres artistes et groupe de Trip Hop, puis Breaking Point en 2002. Leur musique a été très souvent utilisé pour des soundtrack de jeux vidéo ou encore des teaser de film, notement le titre "Leave You Far Behind" pour FIFA, Spiderman, ou encore The Matrix.
+				</div>
+			</div>
+			<div id="cntr">
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong2465886189" name="gsSong2465886189"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=24658861&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=24658861&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Lunatic%20Calm%20Leave%20You%20Far%20Behind" title="Leave You Far Behind by Lunatic Calm on Grooveshark">Leave You Far Behind by Lunatic Calm on Grooveshark</a></span></object></object>
+				<object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong254705170" name="gsSong254705170"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=25470517&style=metal&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=25470517&style=metal&p=0" /><span><a href="http://grooveshark.com/search/song?q=Lunatic%20Calm%20Beatbox%20Burning" title="Beatbox Burning by Lunatic Calm on Grooveshark">Beatbox Burning by Lunatic Calm on Grooveshark</a></span></object></object>
+			</div>
+		</div>
+		
+	</div>
+	<footer>© Rémi Saulneron & Jacques Bardout
+	</footer>
+	</div>	
+	</body>
+
+
+</html>

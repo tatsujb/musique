@@ -1,0 +1,99 @@
+h1
+{
+	text-align: center;
+}
+body
+{
+    width: 99%;
+    font-family: "DejaVu Sans", Georgia;
+	line-height: 24px;
+}
+#cntr
+{
+    width: 80%;
+	margin-left: auto;
+}
+#cnt
+{
+    width: 75%;
+	margin-left: auto;
+}
+#cn
+{
+    margin-top: 40px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { #player
+{
+	position: fixed;
+	margin-top: 97px;
+	margin-left: 110px;
+}
+}
+#player, x:-moz-any-link, x:default
+{
+	position: fixed;
+	top: 73px;
+	left: 118px;
+}
+#player
+{
+	position: fixed;
+	margin-top: 47px\9;
+	margin-left: 110px\9;
+}
+#music
+{
+	margin-top: -70px
+}
+footer
+{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: rgb(0,100,180);
+	font-family: "DejaVu Sans", Georgia;
+    background-color: white;
+}
+.c
+{
+	width: 110px;
+	height: 19%;
+}
+.btn
+{
+	float: left;
+	width: 25%;
+}
+.horizbar
+{
+	width: 85%;
+	position: absolute;
+	margin-left: 110px;
+	margin-right: auto;
+	background-color: #FFA500;
+}
+#menu
+{
+	background-color: #FFD700;
+	width: 110px;
+	float: left;
+}
+#outer
+{
+	width: 100%;
+}
+#content
+{
+	width: 80%;
+	margin: 0 auto;
+	word-wrap: break-word;
+	-webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 10px black;
+    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    transition: width 0.3s;
+    -moz-transition: width 0.3s; /* Firefox 4 */
+    -o-transition: width 0.3s; /* Opera */
+}
